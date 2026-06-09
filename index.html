@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melissa Sepideh Ziaei | Holistic Nutrition & Fitness Coaching</title>
+    <meta
+        name="description"
+        content="Holistic nutrition coaching, personal training, weight management, meal planning, and ClearBARs support for Barrie, Simcoe County, and Ontario."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8R2R6LxM1M4W6Y6f5YkP7Y2P0h7+6NQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+    <style>
+        :root {
+            --bg-deep: #071612;
+            --bg-panel: #0f221d;
+            --bg-card: #133129;
+            --bg-card-soft: #173a30;
+            --text-main: #e8f0eb;
+            --text-soft: #bfd3c7;
+            --text-muted: #90a89d;
+            --gold: #d9b26f;
+            --gold-bright: #efce90;
+            --forest: #2f6b53;
+            --forest-bright: #5fa884;
+            --charcoal: #0a0f0d;
+            --border: rgba(217, 178, 111, 0.24);
+            --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 10px;
+            --container: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--text-main);
+            background: radial-gradient(circle at 15% 15%, #153126 0%, var(--bg-deep) 42%, #040807 100%);
+            line-height: 1.65;
+            letter-spacing: 0.01em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(var(--container), 92%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 92px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.85rem, 3.4vw, 3rem);
+            color: var(--gold-bright);
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .section-lead {
+            max-width: 70ch;
+            color: var(--text-soft);
+            margin-bottom: 2rem;
+            font-size: 1.03rem;
+        }
+
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(4, 12, 9, 0.92);
+            border-bottom: 1px solid rgba(217, 178, 111, 0.25);
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-inner {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .brand-logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid rgba(217, 178, 111, 0.45);
+            object-fit: cover;
+            flex-shrink: 0;
+            background: #fff;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .brand-title {
+            font-family: "Cinzel", serif;
+            color: var(--gold-bright);
+            letter-spacing: 0.08em;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .brand-sub {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-main);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.94rem;
+            color: var(--text-soft);
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--gold-bright);
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--gold);
+            color: var(--gold-bright);
+            border-radius: 999px;
+            padding: 0.55rem 1.1rem;
+            font-size: 0.86rem;
+        }
+
+        .hero {
+            min-height: 86vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background-image:
+                linear-gradient(120deg, rgba(4, 13, 10, 0.88), rgba(7, 22, 18, 0.74)),
+                url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1700&q=80");
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 78% 24%, rgba(217, 178, 111, 0.15), transparent 45%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 2.5rem;
+            align-items: end;
+        }
+
+        .hero-copy h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(2.2rem, 6vw, 4.6rem);
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+            text-shadow: 0 4px 22px rgba(0, 0, 0, 0.55);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-copy p {
+            font-size: 1.08rem;
+            max-width: 58ch;
+            color: #dbe7df;
+            margin-bottom: 1.7rem;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.48);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border-radius: 999px;
+            padding: 0.78rem 1.35rem;
+            font-weight: 600;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(130deg, #1b4a39, #2b6a51);
+            border: 1px solid rgba(223, 202, 151, 0.35);
+            color: #f0f4f2;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.33);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.38);
+        }
+
+        .btn-ghost {
+            border: 1px solid rgba(239, 206, 144, 0.42);
+            color: var(--gold-bright);
+            background: rgba(15, 28, 23, 0.62);
+        }
+
+        .hero-panel {
+            background: rgba(7, 22, 18, 0.72);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.4rem;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-panel h2 {
+            font-family: "Cinzel", serif;
+            letter-spacing: 0.05em;
+            color: var(--gold-bright);
+            font-size: 1.1rem;
+            margin-bottom: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .hero-panel ul {
+            list-style: none;
+            display: grid;
+            gap: 0.7rem;
+        }
+
+        .hero-panel li {
+            display: flex;
+            gap: 0.65rem;
+            color: var(--text-soft);
+            font-size: 0.94rem;
+        }
+
+        .hero-panel i {
+            color: var(--gold);
+            margin-top: 0.2rem;
+        }
+
+        .credentials {
+            background: linear-gradient(180deg, rgba(18, 45, 36, 0.65), rgba(9, 20, 16, 0.85));
+            border-top: 1px solid rgba(217, 178, 111, 0.18);
+            border-bottom: 1px solid rgba(217, 178, 111, 0.18);
+        }
+
+        .credential-grid {
+            padding: 1.35rem 0;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(12, 29, 23, 0.55);
+            border: 1px solid rgba(217, 178, 111, 0.15);
+            border-radius: var(--radius-md);
+            padding: 0.8rem 0.95rem;
+        }
+
+        .credential-item i {
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        .credential-item span {
+            font-size: 0.88rem;
+            color: var(--text-soft);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-photo {
+            min-height: 400px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            background: #fff;
+            display: grid;
+            place-items: center;
+            padding: 1.5rem;
+        }
+
+        .about-photo img {
+            width: min(100%, 340px);
+            height: auto;
+            border-radius: var(--radius-md);
+        }
+
+        .about-card {
+            background: linear-gradient(170deg, rgba(19, 49, 41, 0.75), rgba(8, 19, 15, 0.86));
+            border: 1px solid rgba(217, 178, 111, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+        }
+
+        .about-card p + p {
+            margin-top: 0.95rem;
+            color: var(--text-soft);
+        }
+
+        .quote {
+            margin-top: 1.2rem;
+            padding: 1rem 1.1rem;
+            border-left: 3px solid var(--gold);
+            background: rgba(6, 15, 12, 0.45);
+            color: #e6efe9;
+            font-style: italic;
+        }
+
+        .services-grid {
+            margin-top: 2.2rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(180deg, rgba(17, 42, 34, 0.88), rgba(10, 23, 19, 0.95));
+            border: 1px solid rgba(217, 178, 111, 0.2);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            min-height: 230px;
+            transition: transform 0.24s ease, border-color 0.24s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(239, 206, 144, 0.45);
+        }
+
+        .service-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-bottom: 0.9rem;
+            background: rgba(217, 178, 111, 0.14);
+            color: var(--gold-bright);
+        }
+
+        .service-card h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #f2efe8;
+        }
+
+        .service-card p {
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.7rem;
+            align-items: stretch;
+        }
+
+        .spotlight-image {
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            min-height: 390px;
+            overflow: hidden;
+            background: #fff;
+            display: grid;
+            place-items: center;
+            padding: 1.25rem;
+            box-shadow: var(--shadow);
+        }
+
+        .spotlight-image img {
+            width: min(100%, 420px);
+            height: auto;
+        }
+
+        .spotlight-copy {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(170deg, rgba(21, 49, 41, 0.85), rgba(8, 19, 15, 0.96));
+            padding: 2rem;
+        }
+
+        .spotlight-copy ul {
+            margin-top: 1rem;
+            padding-left: 1rem;
+            color: var(--text-soft);
+            display: grid;
+            gap: 0.45rem;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 1.8rem;
+            align-items: stretch;
+        }
+
+        .approach-card,
+        .process-card {
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            background: linear-gradient(175deg, rgba(16, 39, 31, 0.9), rgba(8, 18, 14, 0.98));
+            padding: 1.6rem;
+        }
+
+        .process-steps {
+            list-style: none;
+            display: grid;
+            gap: 0.9rem;
+            margin-top: 0.9rem;
+        }
+
+        .process-steps li {
+            border: 1px solid rgba(217, 178, 111, 0.18);
+            border-radius: var(--radius-sm);
+            background: rgba(13, 31, 24, 0.6);
+            padding: 0.75rem;
+            color: var(--text-soft);
+            display: flex;
+            gap: 0.7rem;
+        }
+
+        .step-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(217, 178, 111, 0.14);
+            color: var(--gold-bright);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .visual-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.1rem;
+        }
+
+        .visual-panel {
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            min-height: 310px;
+            box-shadow: var(--shadow);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+        }
+
+        .visual-panel.training {
+            background-image:
+                linear-gradient(135deg, rgba(6, 16, 12, 0.62), rgba(17, 41, 32, 0.4)),
+                url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80");
+        }
+
+        .visual-panel.salad {
+            background-image:
+                linear-gradient(135deg, rgba(6, 16, 12, 0.62), rgba(17, 41, 32, 0.4)),
+                url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1400&q=80");
+        }
+
+        .testimonial {
+            border: 1px solid rgba(217, 178, 111, 0.2);
+            border-radius: var(--radius-md);
+            background: rgba(12, 29, 23, 0.78);
+            padding: 1.25rem;
+        }
+
+        .testimonial p {
+            color: var(--text-soft);
+        }
+
+        .testimonial strong {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: var(--gold-bright);
+        }
+
+        .faq {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .faq details {
+            background: rgba(12, 30, 24, 0.83);
+            border: 1px solid rgba(217, 178, 111, 0.2);
+            border-radius: 10px;
+            padding: 0.95rem 1rem;
+        }
+
+        .faq summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #f2e8d3;
+        }
+
+        .faq p {
+            margin-top: 0.6rem;
+            color: var(--text-soft);
+            font-size: 0.94rem;
+        }
+
+        /* Programs — structured coaching packages */
+        .programs-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.15rem;
+        }
+
+        .program-card {
+            border: 1px solid rgba(217, 178, 111, 0.22);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(165deg, rgba(18, 44, 35, 0.92), rgba(8, 19, 15, 0.98));
+            padding: 1.45rem 1.35rem 1.55rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            min-height: 320px;
+            transition: transform 0.24s ease, border-color 0.24s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(239, 206, 144, 0.42);
+        }
+
+        .program-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            border: 1px solid rgba(217, 178, 111, 0.28);
+            border-radius: 999px;
+            padding: 0.35rem 0.7rem;
+            width: fit-content;
+        }
+
+        .program-card h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.65rem;
+            color: #f4efe6;
+        }
+
+        .program-card p {
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .program-list {
+            list-style: none;
+            display: grid;
+            gap: 0.45rem;
+            margin-top: auto;
+        }
+
+        .program-list li {
+            display: flex;
+            gap: 0.55rem;
+            color: var(--text-soft);
+            font-size: 0.9rem;
+        }
+
+        .program-list i {
+            color: var(--forest-bright);
+            margin-top: 0.15rem;
+        }
+
+        /* Who I help — client profile cards */
+        .clients-section {
+            background: linear-gradient(180deg, rgba(10, 24, 19, 0.35), rgba(4, 10, 8, 0.15));
+        }
+
+        .client-grid {
+            margin-top: 1.8rem;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .client-card {
+            border: 1px solid rgba(217, 178, 111, 0.18);
+            border-radius: var(--radius-md);
+            background: rgba(11, 28, 22, 0.72);
+            padding: 1.1rem;
+            text-align: center;
+        }
+
+        .client-card i {
+            font-size: 1.35rem;
+            color: var(--gold);
+            margin-bottom: 0.65rem;
+        }
+
+        .client-card h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.45rem;
+            color: #f0ebe2;
+        }
+
+        .client-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        /* Stats strip between sections */
+        .stats-strip {
+            border-top: 1px solid rgba(217, 178, 111, 0.16);
+            border-bottom: 1px solid rgba(217, 178, 111, 0.16);
+            background: rgba(6, 16, 12, 0.82);
+        }
+
+        .stats-grid {
+            padding: 1.6rem 0;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            color: var(--gold-bright);
+            letter-spacing: 0.04em;
+        }
+
+        .stat-item span {
+            display: block;
+            margin-top: 0.35rem;
+            color: var(--text-muted);
+            font-size: 0.84rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* Connect strip — quick social access */
+        .connect-strip {
+            margin-top: 1.5rem;
+            padding: 1.15rem 1.25rem;
+            border-radius: var(--radius-md);
+            border: 1px dashed rgba(217, 178, 111, 0.28);
+            background: rgba(8, 20, 16, 0.55);
+        }
+
+        .connect-strip p {
+            color: var(--text-soft);
+            font-size: 0.92rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .connect-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+        }
+
+        .connect-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.45rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid rgba(217, 178, 111, 0.25);
+            color: var(--gold-bright);
+            font-size: 0.85rem;
+            background: rgba(14, 32, 26, 0.65);
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .connect-links a:hover {
+            background: rgba(47, 107, 83, 0.35);
+            border-color: rgba(239, 206, 144, 0.45);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 1.35rem;
+        }
+
+        .contact-card,
+        .form-card {
+            border: 1px solid rgba(217, 178, 111, 0.2);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(175deg, rgba(15, 36, 29, 0.9), rgba(8, 18, 14, 0.98));
+            padding: 1.35rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 0.7rem;
+            margin-bottom: 0.9rem;
+            color: var(--text-soft);
+        }
+
+        .contact-item i {
+            color: var(--gold);
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-link {
+            transition: color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--gold-bright);
+        }
+
+        .contact-link:hover span {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .form-grid label {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-grid input,
+        .form-grid textarea,
+        .form-grid select {
+            width: 100%;
+            padding: 0.74rem 0.82rem;
+            border-radius: 10px;
+            border: 1px solid rgba(217, 178, 111, 0.23);
+            background: rgba(4, 10, 8, 0.8);
+            color: var(--text-main);
+            font-family: inherit;
+        }
+
+        .form-grid textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-grid input:focus,
+        .form-grid textarea:focus,
+        .form-grid select:focus {
+            outline: none;
+            border-color: rgba(239, 206, 144, 0.55);
+            box-shadow: 0 0 0 3px rgba(217, 178, 111, 0.12);
+        }
+
+        .footer {
+            padding: 2rem 0 2.2rem;
+            border-top: 1px solid rgba(217, 178, 111, 0.22);
+            background: rgba(3, 8, 6, 0.95);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.55rem;
+            list-style: none;
+        }
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(217, 178, 111, 0.25);
+            color: var(--gold-bright);
+            background: rgba(16, 35, 28, 0.75);
+            transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            border-color: rgba(239, 206, 144, 0.55);
+            background: rgba(47, 107, 83, 0.45);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive breakpoint 1 */
+        @media (max-width: 1100px) {
+            .hero-grid,
+            .about-grid,
+            .spotlight-grid,
+            .approach-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .testimonial-grid,
+            .visual-row {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Responsive breakpoint 2 */
+        @media (max-width: 800px) {
+            .menu-toggle {
+                display: inline-grid;
+                place-items: center;
+            }
+
+            .nav-links {
+                position: absolute;
+                inset: 78px 0 auto 0;
+                background: rgba(4, 11, 8, 0.98);
+                border-bottom: 1px solid rgba(217, 178, 111, 0.24);
+                padding: 1rem 4%;
+                flex-direction: column;
+                align-items: flex-start;
+                display: none;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .credential-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .services-grid,
+            .testimonial-grid,
+            .visual-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive breakpoint 3 */
+        @media (max-width: 560px) {
+            .section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                min-height: 78vh;
+            }
+
+            .hero-copy p {
+                font-size: 1rem;
+            }
+
+            .credential-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .client-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive breakpoint 3 — small phones */
+        @media (max-width: 520px) {
+            .section {
+                padding: 72px 0;
+            }
+
+            .client-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .connect-links {
+                flex-direction: column;
+            }
+
+            .connect-links a {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav" id="top">
+        <div class="container nav-inner">
+            <a href="#top" class="brand" aria-label="Melissa Ziaei home">
+                <img
+                    src="assets/clearbar-brand-logo.jpg"
+                    alt="ClearBAR brand logo"
+                    class="brand-logo"
+                    width="52"
+                    height="52"
+                >
+                <span class="brand-text">
+                    <span class="brand-title">CLEAR Nutrition & Fitness</span>
+                    <span class="brand-sub">Melissa Sepideh Ziaei • Barrie, Simcoe County & Ontario</span>
+                </span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open mobile menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="mobileMenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#clearbars">ClearBARs</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta"><i class="fa-solid fa-phone"></i> 647-545-5327</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h1>Realistic Holistic Nutrition & Fitness Coaching That Fits Real Life</h1>
+                <p>
+                    Melissa Sepideh Ziaei combines nutrition coaching, personal training, and step-by-step habit support
+                    to help clients build lasting energy, strength, and confidence. Serving Barrie, Simcoe County, and
+                    clients across Ontario through in-person and virtual coaching.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-seedling"></i> Start Your Plan</a>
+                    <a href="#clearbars" class="btn btn-ghost"><i class="fa-solid fa-bolt"></i> Explore ClearBARs</a>
+                </div>
+            </div>
+            <aside class="hero-panel">
+                <h2>At a Glance</h2>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> Institute of Holistic Nutrition trained</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Certified Personal Trainer</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Family-owned ClearBARs creator</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Educator, coach, healer, motivator approach</li>
+                </ul>
+            </aside>
+        </div>
+    </header>
+
+    <section class="credentials">
+        <div class="container credential-grid">
+            <div class="credential-item"><i class="fa-solid fa-graduation-cap"></i><span>Institute of Holistic Nutrition</span></div>
+            <div class="credential-item"><i class="fa-solid fa-dumbbell"></i><span>Certified Personal Trainer</span></div>
+            <div class="credential-item"><i class="fa-solid fa-leaf"></i><span>Holistic Nutrition Coaching</span></div>
+            <div class="credential-item"><i class="fa-solid fa-video"></i><span>Virtual + In-Person Sessions</span></div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-photo">
+                <img
+                    src="assets/clearbar-brand-logo.jpg"
+                    alt="ClearBAR — vegan raw protein bars by Melissa Sepideh Ziaei"
+                    loading="lazy"
+                >
+            </div>
+            <article class="about-card">
+                <h2 class="section-title">About Melissa</h2>
+                <p class="section-lead">
+                    Through CLEAR Nutrition and CLEAR Fitness, Melissa helps clients simplify health decisions and make steady
+                    progress without extreme plans.
+                </p>
+                <p>
+                    Melissa has supported clients from first-week nutrition reset to long-term performance and weight
+                    management. Her process blends practical education, movement strategy, and accountability that feels
+                    supportive rather than overwhelming.
+                </p>
+                <p>
+                    She works with busy people who need structure, but also flexibility for real schedules, family demands,
+                    and changing energy levels.
+                </p>
+                <p style="margin-top: 0.85rem; color: var(--text-muted); font-size: 0.92rem;">
+                    Connect on
+                    <a href="https://www.facebook.com/ClearBARz/" target="_blank" rel="noopener noreferrer" style="color: var(--gold-bright);">Facebook</a>,
+                    <a href="https://www.linkedin.com/in/melissa-sepideh-ziaei-0b856552" target="_blank" rel="noopener noreferrer" style="color: var(--gold-bright);">LinkedIn</a>, or
+                    <a href="https://x.com/SkynnFiT" target="_blank" rel="noopener noreferrer" style="color: var(--gold-bright);">X (@SkynnFiT)</a>.
+                </p>
+                <div class="quote">
+                    "Educator, coach, healer, and motivator — guiding realistic, step-by-step health, nutrition,
+                    and weight management progress."
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-lead">
+                Six focused services designed to connect nutrition, training, and long-term adherence.
+            </p>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h3>Holistic Nutrition Coaching</h3>
+                    <p>Personalized nutrition guidance rooted in whole-food strategy, digestion support, and sustainable routine design.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-person-running"></i></div>
+                    <h3>Personal Training</h3>
+                    <p>Strength, mobility, and conditioning sessions adjusted to your current level and long-term goals.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Weight Management</h3>
+                    <p>Evidence-informed planning for fat loss or body recomposition with realistic pacing and support check-ins.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                    <h3>Meal Planning</h3>
+                    <p>Simple meal frameworks, grocery strategy, and prep systems that reduce stress while improving consistency.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+                    <h3>ClearBARs Support</h3>
+                    <p>Use gourmet vegan raw protein bars as breakfast-on-the-go or pre/post workout support when schedule is tight.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-laptop-medical"></i></div>
+                    <h3>Virtual + In-Person Coaching</h3>
+                    <p>Choose the format that fits your week best, with guidance available across Barrie, Simcoe County, and Ontario.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="clearbars">
+        <div class="container spotlight-grid">
+            <div class="spotlight-image">
+                <img
+                    src="assets/clearbar-brand-logo.jpg"
+                    alt="ClearBAR logo — 24g protein vegan raw bars"
+                    loading="lazy"
+                >
+            </div>
+            <article class="spotlight-copy">
+                <h2 class="section-title">ClearBARs Spotlight</h2>
+                <p class="section-lead">
+                    Family-owned and built for everyday performance nutrition.
+                </p>
+                <p>
+                    ClearBARs are gourmet vegan raw protein bars with 24g of protein per bar. They are designed for real-life
+                    schedules where you need a portable, satisfying option for breakfast on the go or pre/post-workout fuel.
+                </p>
+                <ul>
+                    <li>24g protein in each bar</li>
+                    <li>Vegan and raw-focused formula</li>
+                    <li>Useful for busy mornings and training windows</li>
+                    <li>Built by a family-owned local brand</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="stats-strip">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <strong>24g</strong>
+                <span>Protein per ClearBAR</span>
+            </div>
+            <div class="stat-item">
+                <strong>1:1</strong>
+                <span>Personalized coaching</span>
+            </div>
+            <div class="stat-item">
+                <strong>Virtual</strong>
+                <span>Ontario-wide support</span>
+            </div>
+            <div class="stat-item">
+                <strong>Local</strong>
+                <span>Barrie & Simcoe County</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="programs">
+        <div class="container">
+            <h2 class="section-title">Coaching Programs</h2>
+            <p class="section-lead">
+                Three flexible pathways — each built around your schedule, goals, and current starting point.
+            </p>
+            <div class="programs-grid">
+                <article class="program-card">
+                    <span class="program-badge"><i class="fa-solid fa-seedling"></i> Foundation</span>
+                    <h3>Nutrition Reset</h3>
+                    <p>
+                        A structured four-week reset focused on whole-food habits, digestion-friendly choices,
+                        and a realistic meal rhythm you can maintain after the program ends.
+                    </p>
+                    <ul class="program-list">
+                        <li><i class="fa-solid fa-check"></i> Baseline assessment and goal mapping</li>
+                        <li><i class="fa-solid fa-check"></i> Weekly meal framework and grocery guide</li>
+                        <li><i class="fa-solid fa-check"></i> Accountability check-ins</li>
+                    </ul>
+                </article>
+                <article class="program-card">
+                    <span class="program-badge"><i class="fa-solid fa-dumbbell"></i> Performance</span>
+                    <h3>Train + Fuel</h3>
+                    <p>
+                        Combined personal training and nutrition coaching for clients who want strength, energy,
+                        and body composition progress without burnout or extreme restriction.
+                    </p>
+                    <ul class="program-list">
+                        <li><i class="fa-solid fa-check"></i> Custom training sessions</li>
+                        <li><i class="fa-solid fa-check"></i> Pre/post-workout nutrition strategy</li>
+                        <li><i class="fa-solid fa-check"></i> Progress tracking and plan adjustments</li>
+                    </ul>
+                </article>
+                <article class="program-card">
+                    <span class="program-badge"><i class="fa-solid fa-bolt"></i> Lifestyle</span>
+                    <h3>Sustain &amp; Thrive</h3>
+                    <p>
+                        Long-term coaching for busy professionals and parents who need flexible routines,
+                        including ClearBARs support when mornings or workouts run tight on time.
+                    </p>
+                    <ul class="program-list">
+                        <li><i class="fa-solid fa-check"></i> Monthly coaching cadence</li>
+                        <li><i class="fa-solid fa-check"></i> Habit systems for travel and stress weeks</li>
+                        <li><i class="fa-solid fa-check"></i> Virtual or in-person options</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section clients-section" id="clients">
+        <div class="container">
+            <h2 class="section-title">Who I Help</h2>
+            <p class="section-lead">
+                Melissa works with people who want clarity and consistency — not another extreme plan that falls apart in two weeks.
+            </p>
+            <div class="client-grid">
+                <article class="client-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Busy Professionals</h3>
+                    <p>Structured nutrition and training that fits demanding work schedules.</p>
+                </article>
+                <article class="client-card">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <h3>Parents &amp; Families</h3>
+                    <p>Practical meal planning without adding more stress to the household routine.</p>
+                </article>
+                <article class="client-card">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>Weight Management</h3>
+                    <p>Sustainable pacing, accountability, and education — not crash dieting.</p>
+                </article>
+                <article class="client-card">
+                    <i class="fa-solid fa-person-hiking"></i>
+                    <h3>Active Lifestyles</h3>
+                    <p>Fuel and recovery support for training, outdoor activity, and performance goals.</p>
+                </article>
+            </div>
+            <div class="connect-strip">
+                <p>Follow Melissa and ClearBARs online for updates, coaching tips, and product news.</p>
+                <div class="connect-links">
+                    <a href="https://www.facebook.com/ClearBARz/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.linkedin.com/in/melissa-sepideh-ziaei-0b856552" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://x.com/SkynnFiT" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i> X @SkynnFiT
+                    </a>
+                    <a href="mailto:sepzee@gmail.com">
+                        <i class="fa-solid fa-envelope"></i> sepzee@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="philosophy">
+        <div class="container approach-grid">
+            <article class="approach-card">
+                <h2 class="section-title">Approach & Philosophy</h2>
+                <p class="section-lead">
+                    Progress starts with clarity, not extremes.
+                </p>
+                <p>
+                    Melissa combines education with coaching so clients understand <em>why</em> a strategy works.
+                    The focus is to create habits that survive stressful weeks, travel days, and schedule changes.
+                </p>
+                <p style="margin-top: 0.8rem; color: var(--text-soft);">
+                    Sessions align nutrition, movement, sleep, and recovery while keeping each step practical and measurable.
+                </p>
+            </article>
+            <article class="process-card" id="process">
+                <h2 class="section-title">4-Step Process</h2>
+                <ul class="process-steps">
+                    <li><span class="step-num">1</span><span>Assessment: lifestyle, health history, goals, and baseline habits.</span></li>
+                    <li><span class="step-num">2</span><span>Plan Design: personalized nutrition and training roadmap.</span></li>
+                    <li><span class="step-num">3</span><span>Guided Execution: weekly check-ins, coaching feedback, and adjustments.</span></li>
+                    <li><span class="step-num">4</span><span>Long-Term Sustainment: maintain results with flexible routines.</span></li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="visual-row" style="margin-bottom: 1.3rem;">
+                <div class="visual-panel training" aria-label="Personal training visual"></div>
+                <div class="visual-panel salad" aria-label="Nutrition meal prep visual"></div>
+            </div>
+            <h2 class="section-title">Client Feedback</h2>
+            <p class="section-lead">
+                Sample testimonial tone for demo presentation.
+            </p>
+            <div class="testimonial-grid">
+                <article class="testimonial">
+                    <p>"Melissa helped me stop guessing. I now have a structured plan for meals and training that actually fits my work schedule."</p>
+                    <strong>— Barrie Client</strong>
+                </article>
+                <article class="testimonial">
+                    <p>"The step-by-step coaching style made weight management feel realistic. Weekly changes were clear and never overwhelming."</p>
+                    <strong>— Simcoe County Client</strong>
+                </article>
+                <article class="testimonial">
+                    <p>"ClearBARs became my reliable pre-workout option. I finally have consistency with nutrition even on busy days."</p>
+                    <strong>— Ontario Virtual Client</strong>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq">
+                <details>
+                    <summary>Do you offer both virtual and in-person coaching?</summary>
+                    <p>Yes. Programs are available in-person around Barrie/Simcoe and virtually for clients across Ontario.</p>
+                </details>
+                <details>
+                    <summary>Is this only for weight loss?</summary>
+                    <p>No. Coaching supports energy, strength, body composition, athletic readiness, and long-term lifestyle changes.</p>
+                </details>
+                <details>
+                    <summary>Where do ClearBARs fit in a plan?</summary>
+                    <p>They can support breakfast on-the-go or pre/post-workout nutrition when you need a convenient protein option.</p>
+                </details>
+                <details>
+                    <summary>How quickly can I get started?</summary>
+                    <p>After the first consultation, your baseline strategy and first-week plan can usually start right away.</p>
+                </details>
+                <details>
+                    <summary>Can I buy ClearBARs through this site?</summary>
+                    <p>This is a demo presentation page. For ClearBAR orders and product questions, connect via Facebook or email.</p>
+                </details>
+                <details>
+                    <summary>What credentials does Melissa hold?</summary>
+                    <p>Training through the Institute of Holistic Nutrition plus certified personal trainer credentials — combining nutrition education with movement coaching.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container contact-grid">
+            <aside class="contact-card">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-lead">Serving Barrie, Simcoe County, and Ontario. No fixed public street address listed.</p>
+                <a href="tel:16475455327" class="contact-item contact-link">
+                    <i class="fa-solid fa-phone"></i><span>647-545-5327</span>
+                </a>
+                <a href="mailto:sepzee@gmail.com" class="contact-item contact-link">
+                    <i class="fa-solid fa-envelope"></i><span>sepzee@gmail.com</span>
+                </a>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i><span>Southwest Barrie client base + Ontario virtual coaching</span>
+                </div>
+                <a
+                    href="https://www.facebook.com/ClearBARz/"
+                    class="contact-item contact-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-facebook-f"></i><span>Facebook — ClearBARz</span>
+                </a>
+                <a
+                    href="https://x.com/SkynnFiT"
+                    class="contact-item contact-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-x-twitter"></i><span>X — @SkynnFiT</span>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/melissa-sepideh-ziaei-0b856552"
+                    class="contact-item contact-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i><span>LinkedIn — Melissa Sepideh Ziaei</span>
+                </a>
+            </aside>
+            <form class="form-card">
+                <h2 class="section-title">Request a Consultation</h2>
+                <div class="form-grid">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="your@email.com">
+
+                    <label for="goal">Primary Goal</label>
+                    <select id="goal" name="goal">
+                        <option>Holistic nutrition coaching</option>
+                        <option>Personal training</option>
+                        <option>Weight management</option>
+                        <option>Meal planning support</option>
+                        <option>ClearBARs nutrition support</option>
+                    </select>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your current routine and what support you need."></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Send Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <p>© 2026 CLEAR Nutrition & CLEAR Fitness • Demo page for Melissa Sepideh Ziaei • Built for Barrie outreach</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/ClearBARz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook ClearBARz"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://x.com/SkynnFiT" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/melissa-sepideh-ziaei-0b856552" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="mailto:sepzee@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="tel:16475455327" aria-label="Phone"><i class="fa-solid fa-phone"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const links = mobileMenu.querySelectorAll("a");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+
+        links.forEach((link) => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("open");
+            });
+        });
+
+        // Demo form — opens mail client with inquiry details (no backend on static demo)
+        const form = document.querySelector(".form-card");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const goal = document.getElementById("goal").value;
+            const message = document.getElementById("message").value.trim();
+            const body = [
+                "New consultation request from demo site:",
+                "",
+                "Name: " + name,
+                "Phone: " + phone,
+                "Email: " + (email || "not provided"),
+                "Goal: " + goal,
+                "",
+                message
+            ].join("\n");
+            window.location.href =
+                "mailto:sepzee@gmail.com?subject=" +
+                encodeURIComponent("Consultation request — " + name) +
+                "&body=" +
+                encodeURIComponent(body);
+        });
+    </script>
+</body>
+</html>
